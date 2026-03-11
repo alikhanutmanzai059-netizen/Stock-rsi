@@ -1,0 +1,109 @@
+:root {
+  --bg: #0b1220;
+  --panel: #131d33;
+  --text: #e6ecff;
+  --muted: #9fb0d4;
+  --accent: #5aa8ff;
+  --good: #30d158;
+  --border: #26385f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #132344, var(--bg));
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+header p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+button {
+  background: var(--accent);
+  border: 0;
+  color: #051329;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#updatedAt {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card {
+  background: linear-gradient(180deg, #172541, var(--panel));
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  background: rgba(48, 209, 88, 0.15);
+  color: #8ff0a9;
+  border: 1px solid rgba(48, 209, 88, 0.45);
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}
