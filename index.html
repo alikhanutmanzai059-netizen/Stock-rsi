@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Chip RSI Bounce Screener</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>US Blue Chip RSI Bounce Scanner</h1>
+        <p>
+          Tracks large-cap US blue chip stocks and flags candidates where RSI(14) appears
+          to be bouncing up from the oversold 30 zone.
+        </p>
+      </header>
+
+      <section class="controls">
+        <button id="refreshBtn">Refresh Scan</button>
+        <span id="updatedAt" aria-live="polite"></span>
+      </section>
+
+      <section class="card">
+        <h2>Bounce Candidates (RSI crossing above 30)</h2>
+        <p class="hint">
+          Signal rule: current RSI &gt; 30 and recent RSI touched ≤ 30 in the last 5 closes,
+          with rising RSI.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>RSI(14)</th>
+                <th>Prev RSI</th>
+                <th>5D Low RSI</th>
+                <th>Signal</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card" id="statusCard">
+        <h2>Status</h2>
+        <p id="statusText">Loading data…</p>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
